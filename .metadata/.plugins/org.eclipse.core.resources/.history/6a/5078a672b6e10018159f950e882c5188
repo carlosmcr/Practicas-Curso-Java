@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package es.indra.aerolineas.bean;
+
+/**
+ * @author josejarizav
+ *
+ *
+ */
+public class Pasajero implements Persona{
+	
+
+	
+	public Vuelo[] vuelos;
+
+
+	public Vuelo[] getVuelos() {
+		return vuelos;
+	}
+	public void setVuelos(Vuelo[] vuelos) {
+		this.vuelos = vuelos;
+	}
+	
+	
+
+}

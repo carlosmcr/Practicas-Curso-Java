@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package es.indra.aerolineas.bean;
+
+/**
+ * @author josejarizav
+ *
+ *
+ */
+public class Pasajero {
+	
+	public String nombre;
+	public String apellido;
+	public String dni;
+	public int id;
+	
+	Vuelo[] vuelos;
+
+}

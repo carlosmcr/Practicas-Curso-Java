@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package es.indra.aerolineas.bean;
+
+/**
+ * @author josejarizav
+ *
+ *
+ */
+public class Vuelo {
+
+	public int id;
+	public String numeroVuelo;
+	public String origen;
+	public String destino;
+	public int numeroPasajeros;
+	public boolean disponible;
+	
+	public Vuelo() {}
+
+	public Vuelo(int id, String numeroVuelo, String origen, String destino, int numeroPasajeros, boolean disponible) {
+		super();
+		this.id = id;
+		this.numeroVuelo = numeroVuelo;
+		this.origen = origen;
+		this.destino = destino;
+		this.numeroPasajeros = numeroPasajeros;
+		this.disponible = disponible;
+	}
+
+}
