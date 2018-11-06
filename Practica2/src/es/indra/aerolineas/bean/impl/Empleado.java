@@ -1,7 +1,7 @@
 /**
  * 
  */
-package es.indra.aerolineas.bean;
+package es.indra.aerolineas.bean.impl;
 
 /**
  * @author aula6
@@ -16,5 +16,10 @@ public class Empleado extends Persona{
 	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	@Override
+	public String solicitarInformacion() {
+		return "Toma informacion";
 	}
 }
