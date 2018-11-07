@@ -20,6 +20,7 @@ public class ArrayListDemo {
 		}
 		return lista;
 	}
+	
 	public static void main(String[] args) {
 		List<Integer> listaGenerada =  cargarArrayList();
 		System.out.println(listaGenerada.size());
