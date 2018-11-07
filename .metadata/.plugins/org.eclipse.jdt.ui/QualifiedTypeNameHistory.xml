@@ -6,6 +6,17 @@
 <fullyQualifiedTypeName name="es.indra.aerolineas.bean.IAerolinea"/>
 <fullyQualifiedTypeName name="java.nio.file.Path"/>
 <fullyQualifiedTypeName name="java.nio.file.Files"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="es.indra.aerolineas.services.ReadFile"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="es.indra.aerolineas.exceptions.ErrorLecturaDeVuelosException"/>
+<fullyQualifiedTypeName name="OrderedPair"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="es.indra.aerolineas.bean.impl.Billete"/>
+<fullyQualifiedTypeName name="es.indra.aerolineas.bean.impl.Pasajero"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

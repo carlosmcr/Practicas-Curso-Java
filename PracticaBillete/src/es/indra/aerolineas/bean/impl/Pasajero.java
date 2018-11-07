@@ -11,7 +11,7 @@ package es.indra.aerolineas.bean.impl;
 public class Pasajero extends Persona {
 	
 	private Vuelo[] vuelos;
-
+	private Billete billete;
 
 	public String getNombre() {
 		return nombre;
@@ -43,7 +43,12 @@ public class Pasajero extends Persona {
 	public void setVuelos(Vuelo[] vuelos) {
 		this.vuelos = vuelos;
 	}	
-
+	public Billete getBillete() {
+		return billete;
+	}
+	public void setBillete(Billete billete) {
+		this.billete = billete;
+	}
 	
 	@Override
 	public String solicitarInformacion() {
