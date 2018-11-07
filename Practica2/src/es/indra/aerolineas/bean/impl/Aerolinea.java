@@ -3,7 +3,12 @@
  */
 package es.indra.aerolineas.bean.impl;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import es.indra.aerolineas.bean.IAerolinea;
+import es.indra.aerolineas.services.ReadFile;
 
 /**
  * @author josejarizav
@@ -51,7 +56,7 @@ public class Aerolinea implements IAerolinea {
 	}
 
 	@Override
-	public Vuelo[] consultaruelos(String origen) {
+	public Vuelo[] consultarVuelos(String origen) {
 		Vuelo[] disponibles = new Vuelo[10];
 		for (int i = 0; i < vuelos.length; i++) {
 			if(vuelos[i].getOrigen().equals(origen)) {
@@ -62,7 +67,7 @@ public class Aerolinea implements IAerolinea {
 	}
 	
 	@Override
-	public Vuelo[] consultaruelos(String origen, String destino) {
+	public Vuelo[] consultarVuelos(String origen, String destino) {
 		Vuelo[] disponibles = new Vuelo[10];
 		for (int i = 0; i < vuelos.length; i++) {
 			if(vuelos[i].getOrigen().equals(origen) && vuelos[i].getDestino().equals(destino)) {
@@ -70,7 +75,16 @@ public class Aerolinea implements IAerolinea {
 			}
 		}		
 		return disponibles;
-	}	
+	}
+	
+	@Override
+	public void consultarVuelos() {
+		ReadFile rf = new ReadFile();
+		List<String> contenido = rf.retornarVuelos();		
+		for(String c: contenido) {
+			System.out.println(c);
+		}
+	}
 	
 	@Override
 	public void anularVuelos(String... vuelos) {

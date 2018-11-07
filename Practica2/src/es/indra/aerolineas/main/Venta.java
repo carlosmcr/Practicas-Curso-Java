@@ -59,20 +59,24 @@ public class Venta {
 		
 		System.out.println("*************************************************************************");
 		
-		Vuelo[] disponibles = aa.consultaruelos("MAD1");
+		Vuelo[] disponibles = aa.consultarVuelos("MAD1");
 		for (int i = 0; i < disponibles.length; i++) {
 			if(disponibles[i] != null)
 			System.out.println("Solo Origen ".concat(disponibles[i].toString()));
 		}
 		
-		disponibles = aa.consultaruelos("MAD4", "VLC");
+		System.out.println("");
+		disponibles = aa.consultarVuelos("MAD4", "VLC");
 		for (int i = 0; i < disponibles.length; i++) {
 			if(disponibles[i] != null)
 			System.out.println("Origen y destino " .concat(disponibles[i].toString()));
 		}
 		
+		System.out.println("");
 		aa.anularVuelos();
 		aa.anularVuelos("Vuelo1", "Vuelo2", "Vuelo3");
+		System.out.println("");
+		aa.consultarVuelos();
 
 	}
 

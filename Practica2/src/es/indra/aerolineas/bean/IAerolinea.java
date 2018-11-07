@@ -9,11 +9,13 @@ public interface IAerolinea {
 	 Vuelo[] getVuelos();
 	
 	
-	public Vuelo[] consultaruelos(String origen);
+	public Vuelo[] consultarVuelos(String origen);
 	
-	public Vuelo[] consultaruelos(String origen, String destino);
+	public Vuelo[] consultarVuelos(String origen, String destino);
 	
 	public void anularVuelos(String... vuelos);
+
+	void consultarVuelos();
 
 	
 

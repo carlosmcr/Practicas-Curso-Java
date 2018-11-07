@@ -5,4 +5,7 @@
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="es.indra.aerolineas.bean.IAerolinea"/>
 <fullyQualifiedTypeName name="java.nio.file.Path"/>
+<fullyQualifiedTypeName name="java.nio.file.Files"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="es.indra.aerolineas.services.ReadFile"/>
 </qualifiedTypeNameHistroy>
