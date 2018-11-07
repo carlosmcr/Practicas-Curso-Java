@@ -3,6 +3,7 @@
  */
 package es.indra.aerolineas.main;
 
+import java.io.IOException;
 import java.security.spec.ECFieldF2m;
 
 import es.indra.aerolineas.bean.IAerolinea;
@@ -75,8 +76,16 @@ public class Venta {
 		System.out.println("");
 		aa.anularVuelos();
 		aa.anularVuelos("Vuelo1", "Vuelo2", "Vuelo3");
+		
 		System.out.println("");
 		aa.consultarVuelos();
+		
+		System.out.println("");
+		try {
+			aa.consultarVuelos2();
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
 
 	}
 

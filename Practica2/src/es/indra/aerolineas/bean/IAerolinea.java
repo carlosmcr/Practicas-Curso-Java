@@ -1,5 +1,7 @@
 package es.indra.aerolineas.bean;
 
+import java.io.IOException;
+
 import es.indra.aerolineas.bean.impl.Vuelo;
 
 public interface IAerolinea {
@@ -16,6 +18,7 @@ public interface IAerolinea {
 	public void anularVuelos(String... vuelos);
 
 	void consultarVuelos();
+	void consultarVuelos2() throws IOException;
 
 	
 

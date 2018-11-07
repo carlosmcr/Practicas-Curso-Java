@@ -3,11 +3,13 @@
  */
 package es.indra.aerolineas.bean.impl;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 import es.indra.aerolineas.bean.IAerolinea;
+import es.indra.aerolineas.exceptions.ErrorLecturaDeVuelosException;
 import es.indra.aerolineas.services.ReadFile;
 
 /**
@@ -80,8 +82,22 @@ public class Aerolinea implements IAerolinea {
 	@Override
 	public void consultarVuelos() {
 		ReadFile rf = new ReadFile();
-		List<String> contenido = rf.retornarVuelos();		
-		for(String c: contenido) {
+		List<String> contenido;
+		try {
+			contenido = rf.retornarVuelos();
+			for(String c: contenido) {;		
+				System.out.println(c);
+			}
+		} catch (ErrorLecturaDeVuelosException e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+	@Override
+	public void consultarVuelos2() throws IOException{
+		ReadFile rf = new ReadFile();
+		List<String> contenido = rf.retornarVuelosPropagandoError();
+		for(String c: contenido) {;		
 			System.out.println(c);
 		}
 	}
