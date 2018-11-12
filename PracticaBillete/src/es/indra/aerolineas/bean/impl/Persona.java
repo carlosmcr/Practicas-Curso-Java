@@ -14,5 +14,6 @@ public abstract class  Persona {
 		return nombre.toUpperCase();
 	}
 
+
 	public abstract String solicitarInformacion();
 }

@@ -3,6 +3,8 @@
  */
 package es.indra.aerolineas.bean.impl;
 
+import java.util.Arrays;
+
 /**
  * @author josejarizav
  *
@@ -54,7 +56,14 @@ public class Pasajero extends Persona {
 	public String solicitarInformacion() {
 		return "Toma informacion";
 	}
+	@Override
+	public String toString() {		 
+		return "Persona [nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni + ", id=" + id + "]"+"Pasajero [billete=" + billete + "]";
+	}
 	
+	
+	
+	 
 	
 
 }

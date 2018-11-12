@@ -1,5 +1,9 @@
 package es.indra.aerolineas.bean.impl;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
 public class Billete {
 
 	
@@ -8,6 +12,7 @@ public class Billete {
 		private String destino;
 		private int asiento;
 		private int idBillete;
+		private Map<Integer, Billete> billetes = new HashMap<>();
 		
 		
 		public String getFecha() {
@@ -39,6 +44,28 @@ public class Billete {
 		}
 		public void setIdBillete(int idBillete) {
 			this.idBillete = idBillete;
+		}
+		
+		public Map<Integer, Billete> getBilletes() {
+			return billetes;
+		}
+		public void setBilletes(Map<Integer, Billete> billetes) {
+			this.billetes = billetes;
+		}
+		@Override
+		public String toString() {
+			return "Billete [fecha=" + fecha + ", origen=" + origen + ", destino=" + destino + ", asiento=" + asiento
+					+ ", idBillete=" + idBillete + "]";
+		}
+		
+
+		public Map<Integer, Billete> verBilletesPorFecha(String fecha1, Map<Integer, Billete> map) {
+			for(Entry<Integer, Billete> elemento: map.entrySet()) {
+				if(elemento.getValue().getFecha().equals(fecha1)) {
+					billetes.put(elemento.getKey(), elemento.getValue());	
+				}
+			}
+			return billetes;
 		}
 		
 		
