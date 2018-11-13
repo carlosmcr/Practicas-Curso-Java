@@ -1,11 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
+
 <style>
 h1 {
 	color: blue;
@@ -25,10 +18,13 @@ body {
 	background-color: aqua;
 }
 </style>
-<body>
-</body>
-	<footer>
-		<h3>Carlos Javier Alcalde Benítez ©</h3>
-	</footer>
-</html>
+<footer>
+	<h3>Carlos Javier Alcalde Benítez ©</h3>
+	<h1>
+		<%
+	out.print("Idioma: " + session.getAttribute("idioma"));
+	%>
+	</h1>
+</footer>
+
 

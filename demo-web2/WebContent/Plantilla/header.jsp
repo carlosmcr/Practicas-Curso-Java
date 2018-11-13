@@ -1,11 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
 <style>
 h1 {
 	color: blue;
@@ -26,8 +18,10 @@ body {
 }
 </style>
 <header>
-		<h1>Esto es un Header</h1>
+	<h1>
+	<%if (session.getAttribute("Usuario") != null){
+		out.print("Bienvenido: " + session.getAttribute("Usuario"));	
+	}
+	%>
+	</h1>
 </header>
-<body>
-</body>
-</html>

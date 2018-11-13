@@ -14,6 +14,8 @@
 				type="submit" value="Enviar" />
 		</form>
 	</div>
+	<a href="error/generarError.jsp">GenerarError</a>
+	<a href="login/login.jsp">Login</a>
 
 </body>
 <%@ include file="Plantilla/footer.jsp"%>
