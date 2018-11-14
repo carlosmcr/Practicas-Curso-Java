@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ page import="java.util.ArrayList"%>
-<%@ page import="es.indra.carro.beans.Categoria"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,18 +9,16 @@
 </head>
 <%@ include file="Plantilla/header.jsp"%>
 <body>
-<%@ include file="Plantilla/menu.jsp"%>
-	<table>
-		<%	ArrayList<Categoria> listaCategorias = (ArrayList<Categoria>) request.getAttribute("listaCategorias");
-			for (Categoria categoria : listaCategorias) {
-		%>
-		<tr>
-			<td><%=categoria.getId()%></td>
-			<td><%=categoria.getNombre()%></td>
-		</tr>
-		<%	}	%>
+	<%@ include file="Plantilla/menu.jsp"%>
 
-	</table>
+		<table>
+			<c:forEach items="${listaCategorias}" var="categoria">
+				<tr>
+					<td>${categoria.id}</td>
+					<td>${categoria.nombre}</td>
+				</tr>
+			</c:forEach>
+		</table>
 
 </body>
 <%@ include file="Plantilla/header.jsp"%>

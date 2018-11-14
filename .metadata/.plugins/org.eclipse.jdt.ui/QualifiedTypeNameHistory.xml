@@ -10,9 +10,7 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="es.indra.aerolineas.exceptions.ErrorLecturaDeVuelosException"/>
 <fullyQualifiedTypeName name="OrderedPair"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
 <fullyQualifiedTypeName name="es.indra.aerolineas.bean.impl.Billete"/>
 <fullyQualifiedTypeName name="es.indra.aerolineas.bean.impl.Pasajero"/>
@@ -31,4 +29,11 @@
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
+<fullyQualifiedTypeName name="es.indra.carro.conexion.mysql"/>
+<fullyQualifiedTypeName name="es.indra.carro.beans.Categoria"/>
+<fullyQualifiedTypeName name="es.indra.carro.consultas.ConsultaCategorias"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+<fullyQualifiedTypeName name="es.indra.singelton.Singelton"/>
 </qualifiedTypeNameHistroy>
