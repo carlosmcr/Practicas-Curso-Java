@@ -23,14 +23,14 @@ public class mysql {
 			}
 
 			// Crea un registro
-			String query = " insert into categorias values (?, ?)";
-			PreparedStatement preparedStmt = conn1.prepareStatement(query);
-			preparedStmt.setInt(1, 2);
-			preparedStmt.setString(2, "Alimentacion");
-			preparedStmt.execute();
+//			String query = " insert into categorias values (?, ?)";
+//			PreparedStatement preparedStmt = conn1.prepareStatement(query);
+//			preparedStmt.setInt(1, 2);
+//			preparedStmt.setString(2, "Alimentacion");
+//			preparedStmt.execute();
 
 			// Visualiza todos los registros de la tabla
-			query = "SELECT * FROM categorias";
+			String query = "SELECT * FROM categorias";
 			Statement st = conn1.createStatement();
 			ResultSet rs = st.executeQuery(query);
 			while (rs.next()) {

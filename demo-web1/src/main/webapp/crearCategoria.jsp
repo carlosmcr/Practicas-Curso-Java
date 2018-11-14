@@ -11,6 +11,11 @@
 <%@ include file="Plantilla/header.jsp"%>
 <body>
 <%@ include file="Plantilla/menu.jsp"%>
+	<form name="formularioCategorias" method="POST" action="Servlet?action=crearCategoria">
+		ID: <input id="id" type=text name="id" size="10" /> 
+		Nombre: <input id="nombre" type=text name="nombre" size="25" /> <input type="submit"
+			value="Enviar" />
+	</form>
 </body>
 <%@ include file="Plantilla/header.jsp"%>
 </html>
