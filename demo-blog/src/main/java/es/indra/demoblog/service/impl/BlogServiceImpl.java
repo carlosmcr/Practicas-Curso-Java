@@ -31,12 +31,12 @@ public class BlogServiceImpl implements BlogService {
 	}
 
 	@Override
-	public String editBlog(Blog blog) {
+	public Boolean editBlog(Blog blog) {
 		if (this.blogRepository.existsById(blog.getId())) {
 			this.blogRepository.save(blog);
-			return "Blog Modificado";
+			return true;
 		} else {
-			return "No se ha podido modificar el Blog";
+			return false;
 		}
 	}
 

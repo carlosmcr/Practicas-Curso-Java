@@ -15,7 +15,7 @@ public interface BlogService {
 
 	public Blog saveBlog(Blog blog);
 
-	public String editBlog(Blog blog);
+	public Boolean editBlog(Blog blog);
 
 	public void removeBlog(Blog blog);
 

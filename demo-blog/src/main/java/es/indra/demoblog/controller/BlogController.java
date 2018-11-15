@@ -12,13 +12,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import es.indra.demoblog.model.Blog;
+import es.indra.demoblog.model.Respuesta;
 import es.indra.demoblog.service.BlogService;
 
 @RestController
 public class BlogController {
-
 	@Autowired
 	BlogService blogService;
+	@Autowired
+	Respuesta resp;
 
 	@RequestMapping(value = "/blog", method = RequestMethod.GET)
 	public ResponseEntity<List<Blog>> getAllBlog() {
@@ -40,8 +42,16 @@ public class BlogController {
 	}
 
 	@RequestMapping(value = "/blog", method = RequestMethod.PUT)
-	public ResponseEntity<String> update(@RequestBody Blog blog) {
-		return new ResponseEntity<String>(this.blogService.editBlog(blog), HttpStatus.OK);
+	public ResponseEntity<Respuesta> update(@RequestBody Blog blog) {
+		if (this.blogService.editBlog(blog)) {
+			resp.setCode(200);
+			resp.setMensaje("Blog Modificado");
+			return new ResponseEntity<Respuesta>(resp, HttpStatus.OK);
+		} else {
+			resp.setCode(404);
+			resp.setMensaje("Error al modificar el Blog");
+			return new ResponseEntity<Respuesta>(resp, HttpStatus.NOT_FOUND);
+		}
 	}
 
 	@RequestMapping(value = "/blog/{id}", method = RequestMethod.DELETE)

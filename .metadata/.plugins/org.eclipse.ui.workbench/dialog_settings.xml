@@ -3,12 +3,12 @@
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="340" key="DIALOG_X_ORIGIN"/>
-		<item value="8" key="DIALOG_Y_ORIGIN"/>
+		<item value="314" key="DIALOG_X_ORIGIN"/>
+		<item value="166" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="-1" key="dialogHeight"/>
-		<item value="-1" key="dialogWidth"/>
+		<item value="788" key="dialogHeight"/>
+		<item value="969" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">
