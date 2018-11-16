@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Blog</title>
+<title>Categoria</title>
 </head>
 <body>
-	<h2>${titulo}</h2>
-	<span>${blog.titulo}</span>
+	<h2>${categoriaId}</h2>
+	<h2>${json}</h2>
 </body>
 </html>
