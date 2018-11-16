@@ -11,20 +11,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import es.indra.carro.springcarro.aspects.annotation.TiempoDeEjecucion;
 import es.indra.carro.springcarro.model.Categoria;
 import es.indra.carro.springcarro.model.Respuesta;
 import es.indra.carro.springcarro.service.CategoriaService;
 
 @RestController
-public class CarroController {
+public class CategoriaController {
 
 	@Autowired
 	CategoriaService categoriaService;
 	@Autowired
 	Respuesta resp;
 
-	@TiempoDeEjecucion
+	// @TiempoDeEjecucion
 	@RequestMapping(value = "/categoria", method = RequestMethod.GET)
 	public ResponseEntity<List<Categoria>> getAllCategoria() {
 		return new ResponseEntity<List<Categoria>>(this.categoriaService.getAllCategoria(), HttpStatus.OK);

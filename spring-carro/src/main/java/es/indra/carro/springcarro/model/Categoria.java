@@ -9,25 +9,25 @@ public class Categoria {
 
 	@Id
 	@GeneratedValue
-	private int id;
+	private int id_categoria;
 	private String nombre;
 
 	public Categoria() {
 
 	}
 
-	public Categoria(int id, String nombre) {
+	public Categoria(int id_categoria, String nombre) {
 		super();
-		this.id = id;
+		this.id_categoria = id_categoria;
 		this.nombre = nombre;
 	}
 
-	public int getId() {
-		return id;
+	public int getId_categoria() {
+		return id_categoria;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId_categoria(int id_categoria) {
+		this.id_categoria = id_categoria;
 	}
 
 	public String getNombre() {
@@ -40,7 +40,7 @@ public class Categoria {
 
 	@Override
 	public String toString() {
-		return "Categoria [id=" + id + ", nombre=" + nombre + "]";
+		return "Categoria [id_categoria=" + id_categoria + ", nombre=" + nombre + "]";
 	}
 
 }

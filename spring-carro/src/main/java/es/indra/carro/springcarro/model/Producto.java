@@ -3,21 +3,32 @@
  */
 package es.indra.carro.springcarro.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 /**
  * @author aula3
  *
  */
+@Entity
 public class Producto {
-	
+
+	@Id
+	@GeneratedValue
 	private int id;
 	private String nombre;
 	private String descripcion;
+	@ManyToOne
+	@JoinColumn(name = "id_categoria", insertable = true, updatable = true)
 	private Categoria categoria;
 	private double precio;
 	private int stock;
-	
+
 	public Producto() {
-		
+
 	}
 
 	public Producto(int id, String nombre, String descripcion, Categoria categoria, double precio, int stock) {
@@ -80,14 +91,7 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", categoria=" + categoria
-				+ ", precio=" + precio + ", stock=" + stock + "]";
+		return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", categoria=" + categoria + ", precio=" + precio + ", stock=" + stock + "]";
 	}
-	
-	
-	
-	
-	
+
 }
-
-

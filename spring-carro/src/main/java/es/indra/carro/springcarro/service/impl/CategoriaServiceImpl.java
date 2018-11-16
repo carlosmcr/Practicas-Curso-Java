@@ -32,7 +32,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 
 	@Override
 	public Boolean editCategoria(Categoria categoria) {
-		if (this.categoriaRepository.existsById(categoria.getId())) {
+		if (this.categoriaRepository.existsById(categoria.getId_categoria())) {
 			this.categoriaRepository.save(categoria);
 			return true;
 		} else {
