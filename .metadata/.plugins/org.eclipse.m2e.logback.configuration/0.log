@@ -4132,3 +4132,6 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2018-11-16 12:18:27,746 [Worker-94: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\aula2\Desktop\Carlos\Eclipse\spring-mvc-demo-basico\src\test\resources
 2018-11-16 12:18:27,746 [Worker-94: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of spring-mvc-demo-basico
 2018-11-16 12:18:27,746 [Worker-94: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for spring-mvc-demo-basico
+2018-11-16 12:18:27,746 [Worker-94: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-11-16 12:18:43,041 [Worker-92: Launching spring-mvc-demo-basico (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\aula2\Desktop\Carlos\Eclipse\spring-mvc-demo-basico
+2018-11-16 12:18:43,041 [Worker-92: Launching spring-mvc-demo-basico (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B tomcat7:run -Dmaven.tomcat.port=8083
