@@ -32,7 +32,7 @@ public class ProductoServiceImpl implements ProductoService {
 
 	@Override
 	public Boolean editProducto(Producto producto) {
-		if (this.productoRepository.existsById(producto.getId())) {
+		if (this.productoRepository.existsById(producto.getId_producto())) {
 			this.productoRepository.save(producto);
 			return true;
 		}

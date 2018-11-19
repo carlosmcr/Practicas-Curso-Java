@@ -18,12 +18,13 @@ public class Producto {
 
 	@Id
 	@GeneratedValue
-	private int id;
+	private int id_producto;
 	private String nombre;
 	private String descripcion;
+	// @JsonBackReference
 	@ManyToOne
-	@JoinColumn(name = "id_categoria", insertable = true, updatable = true)
-	private Categoria categoria;
+	@JoinColumn(name = "id_categoria")
+	private int id_categoria;
 	private double precio;
 	private int stock;
 
@@ -31,22 +32,22 @@ public class Producto {
 
 	}
 
-	public Producto(int id, String nombre, String descripcion, Categoria categoria, double precio, int stock) {
+	public Producto(int id_producto, String nombre, String descripcion, int id_categoria, double precio, int stock) {
 		super();
-		this.id = id;
+		this.id_producto = id_producto;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
-		this.categoria = categoria;
+		this.id_categoria = id_categoria;
 		this.precio = precio;
 		this.stock = stock;
 	}
 
-	public int getId() {
-		return id;
+	public int getId_producto() {
+		return id_producto;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId_producto(int id_producto) {
+		this.id_producto = id_producto;
 	}
 
 	public String getNombre() {
@@ -65,12 +66,12 @@ public class Producto {
 		this.descripcion = descripcion;
 	}
 
-	public Categoria getCategoria() {
-		return categoria;
+	public int getId_categoria() {
+		return id_categoria;
 	}
 
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
+	public void setId_categoria(int id_categoria) {
+		this.id_categoria = id_categoria;
 	}
 
 	public double getPrecio() {
@@ -91,7 +92,7 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", categoria=" + categoria + ", precio=" + precio + ", stock=" + stock + "]";
+		return "Producto [id_producto=" + id_producto + ", nombre=" + nombre + ", descripcion=" + descripcion + ", id_categoria=" + id_categoria + ", precio=" + precio + ", stock=" + stock + "]";
 	}
 
 }

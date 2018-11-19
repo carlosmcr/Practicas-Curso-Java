@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import es.indra.carro.springcarro.model.Categoria;
+import es.indra.carro.springcarro.model.Producto;
 import es.indra.carro.springcarro.model.Respuesta;
 import es.indra.carro.springcarro.service.CategoriaService;
 
@@ -32,6 +33,11 @@ public class CategoriaController {
 	@RequestMapping(value = "/categoria/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Categoria> getById(@PathVariable("id") int id) {
 		return new ResponseEntity<Categoria>(this.categoriaService.getCategoriaById(id), HttpStatus.OK);
+	}
+
+	@RequestMapping(value = "/categoria/productos/{id_categoria}", method = RequestMethod.GET)
+	public ResponseEntity<List<Producto>> getProductosByCategoria(@PathVariable("id_categoria") int id_categoria) {
+		return new ResponseEntity<List<Producto>>(this.categoriaService.getProductosPorCategoria(id_categoria), HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/categoria", method = RequestMethod.POST)

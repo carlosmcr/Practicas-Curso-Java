@@ -1,8 +1,11 @@
 package es.indra.carro.springcarro.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Categoria {
@@ -11,15 +14,20 @@ public class Categoria {
 	@GeneratedValue
 	private int id_categoria;
 	private String nombre;
+	// @JsonManagedReference
+	// @JoinColumn(name = "id_producto")
+	@OneToMany(mappedBy = "categoria")
+	private List<Producto> listaProductos;
 
 	public Categoria() {
 
 	}
 
-	public Categoria(int id_categoria, String nombre) {
+	public Categoria(int id_categoria, String nombre, List<Producto> listaProductos) {
 		super();
 		this.id_categoria = id_categoria;
 		this.nombre = nombre;
+		this.listaProductos = listaProductos;
 	}
 
 	public int getId_categoria() {
@@ -38,9 +46,17 @@ public class Categoria {
 		this.nombre = nombre;
 	}
 
+	public List<Producto> getListaProductos() {
+		return listaProductos;
+	}
+
+	public void setListaProductos(List<Producto> listaProductos) {
+		this.listaProductos = listaProductos;
+	}
+
 	@Override
 	public String toString() {
-		return "Categoria [id_categoria=" + id_categoria + ", nombre=" + nombre + "]";
+		return "Categoria [id_categoria=" + id_categoria + ", nombre=" + nombre + ", listaProductos=" + listaProductos + "]";
 	}
 
 }
