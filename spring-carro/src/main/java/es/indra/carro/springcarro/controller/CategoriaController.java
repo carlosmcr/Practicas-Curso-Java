@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import es.indra.carro.springcarro.model.Categoria;
-import es.indra.carro.springcarro.model.Producto;
 import es.indra.carro.springcarro.model.Respuesta;
 import es.indra.carro.springcarro.service.CategoriaService;
 
@@ -24,28 +24,31 @@ public class CategoriaController {
 	@Autowired
 	Respuesta resp;
 
+	@CrossOrigin(origins = "http://localhost:4200")
 	// @TiempoDeEjecucion
 	@RequestMapping(value = "/categoria", method = RequestMethod.GET)
 	public ResponseEntity<List<Categoria>> getAllCategoria() {
 		return new ResponseEntity<List<Categoria>>(this.categoriaService.getAllCategoria(), HttpStatus.OK);
 	}
 
+	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping(value = "/categoria/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Categoria> getById(@PathVariable("id") int id) {
 		return new ResponseEntity<Categoria>(this.categoriaService.getCategoriaById(id), HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/categoria/productos/{id_categoria}", method = RequestMethod.GET)
-	public ResponseEntity<List<Producto>> getProductosByCategoria(@PathVariable("id_categoria") int id_categoria) {
-		return new ResponseEntity<List<Producto>>(this.categoriaService.getProductosPorCategoria(id_categoria), HttpStatus.OK);
-	}
-
+//	@RequestMapping(value = "/categoria/productos/{id_categoria}", method = RequestMethod.GET)
+//	public ResponseEntity<List<Producto>> getProductosByCategoria(@PathVariable("id_categoria") int id_categoria) {
+//		return new ResponseEntity<List<Producto>>(this.categoriaService.getProductosPorCategoria(id_categoria), HttpStatus.OK);
+//	}
+	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping(value = "/categoria", method = RequestMethod.POST)
 	public ResponseEntity<Void> create(@RequestBody Categoria categoria) {
 		this.categoriaService.saveCategoria(categoria);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 
+	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping(value = "/categoria", method = RequestMethod.PUT)
 	public ResponseEntity<Respuesta> update(@RequestBody Categoria categoria) {
 		if (this.categoriaService.editCategoria(categoria)) {
@@ -58,6 +61,7 @@ public class CategoriaController {
 		return new ResponseEntity<Respuesta>(resp, HttpStatus.BAD_REQUEST);
 	}
 
+	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping(value = "/categoria/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<String> removeById(@PathVariable("id") int id) {
 		Categoria categoria = this.categoriaService.getCategoriaById(id);

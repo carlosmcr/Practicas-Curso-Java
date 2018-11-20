@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import es.indra.carro.springcarro.model.Categoria;
-import es.indra.carro.springcarro.model.Producto;
 import es.indra.carro.springcarro.repository.CategoriaRepository;
 import es.indra.carro.springcarro.service.CategoriaService;
 
@@ -46,9 +45,9 @@ public class CategoriaServiceImpl implements CategoriaService {
 		this.categoriaRepository.delete(categoria);
 	}
 
-	@Override
-	public List<Producto> getProductosPorCategoria(int id_categoria) {
-		return this.categoriaRepository.getProductosPorCategoria(id_categoria);
-	}
+//	@Override
+//	public List<Producto> getProductosPorCategoria(int id_categoria) {
+//		return this.categoriaRepository.getProductosPorCategoria(id_categoria);
+//	}
 
 }
