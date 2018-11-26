@@ -24,14 +24,14 @@ public class CategoriaController {
 	@Autowired
 	Respuesta resp;
 
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "*")
 	// @TiempoDeEjecucion
 	@RequestMapping(value = "/categoria", method = RequestMethod.GET)
 	public ResponseEntity<List<Categoria>> getAllCategoria() {
 		return new ResponseEntity<List<Categoria>>(this.categoriaService.getAllCategoria(), HttpStatus.OK);
 	}
 
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/categoria/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Categoria> getById(@PathVariable("id") int id) {
 		return new ResponseEntity<Categoria>(this.categoriaService.getCategoriaById(id), HttpStatus.OK);
@@ -41,14 +41,14 @@ public class CategoriaController {
 //	public ResponseEntity<List<Producto>> getProductosByCategoria(@PathVariable("id_categoria") int id_categoria) {
 //		return new ResponseEntity<List<Producto>>(this.categoriaService.getProductosPorCategoria(id_categoria), HttpStatus.OK);
 //	}
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/categoria", method = RequestMethod.POST)
 	public ResponseEntity<Void> create(@RequestBody Categoria categoria) {
 		this.categoriaService.saveCategoria(categoria);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/categoria", method = RequestMethod.PUT)
 	public ResponseEntity<Respuesta> update(@RequestBody Categoria categoria) {
 		if (this.categoriaService.editCategoria(categoria)) {
@@ -61,7 +61,7 @@ public class CategoriaController {
 		return new ResponseEntity<Respuesta>(resp, HttpStatus.BAD_REQUEST);
 	}
 
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/categoria/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<String> removeById(@PathVariable("id") int id) {
 		Categoria categoria = this.categoriaService.getCategoriaById(id);
